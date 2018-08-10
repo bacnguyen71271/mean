@@ -8,6 +8,10 @@ import { PostsService } from '../posts.service';
 import { MatSnackBar } from '@angular/material';
 
 
+
+import { TranslateService } from '@ngx-translate/core';
+
+
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/take';
@@ -26,7 +30,7 @@ export class PostListComponent implements OnInit {
   private nameFilter: Subject<string> = new Subject<string>();
 
   // Inject Angular2Apollo service
-  constructor(private _postService: PostsService, public snackBar: MatSnackBar) {
+  constructor(private _postService: PostsService, public snackBar: MatSnackBar,private translate: TranslateService) {
   }
 
   public ngOnInit() {

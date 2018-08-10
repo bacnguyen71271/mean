@@ -24,6 +24,8 @@ import {
 } from '@angular/material';
 import 'hammerjs';
 
+
+
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -40,8 +42,18 @@ import { ProfileComponent } from './profile';
 import { NoContentComponent } from './no-content';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+
+
+
 import '../styles/styles.scss';
 import '../styles/headings.css';
+
+
+
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -54,6 +66,9 @@ type StoreType = {
   restoreInputValues: () => void,
   disposeOldHosts: () => void
 };
+
+
+
 
 /**
  * `AppModule` is the main entry point into Angular2's bootstraping process
@@ -82,6 +97,14 @@ type StoreType = {
     MatGridListModule,
     RouterModule.forRoot(ROUTES, { useHash: false, preloadingStrategy: PreloadAllModules }),
     ApolloModule.forRoot(client),
+    HttpClientModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        })
   ],
   /**
    * Expose our Services and Providers into Angular's dependency injection.
@@ -91,12 +114,17 @@ type StoreType = {
     APP_PROVIDERS
   ]
 })
+
+
 export class AppModule {
 
   constructor(
     public appRef: ApplicationRef,
     public appState: AppState
-  ) { }
+  ) {
+   }
+ 
+
 
   public hmrOnInit(store: StoreType) {
     if (!store || !store.state) {
@@ -149,4 +177,8 @@ export class AppModule {
     delete store.disposeOldHosts;
   }
 
+}
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
 }

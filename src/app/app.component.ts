@@ -8,6 +8,9 @@ import {
 } from '@angular/core';
 import { AppState } from './app.service';
 import { PostsService } from './posts/posts.service';
+import {PlatformLocation } from '@angular/common';
+
+import { TranslateService } from '@ngx-translate/core';
 /**
  * App Component
  * Top Level Component
@@ -20,13 +23,40 @@ import { PostsService } from './posts/posts.service';
   ],
   template: `
     <header>
-      <mat-toolbar color="primary">
-        <a [routerLink]="['/']" class="logotTxt">MEAN</a>
-        <a class="links" [routerLink]="['/posts']">Posts</a>
-        <a class="links" [routerLink]="['/react']">React</a>
-        <a class="links" href="/api/graphql">GraphQL browser</a>        
-      </mat-toolbar>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <h1 title="{{name}}"><a class="navbar-brand logo" href="{{url}}" >{{ name }}</a></h1>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse collapse" id="navbarsExample07" style="">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/posts">Posts <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="react">React</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="api/graphql">Graphql</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown07">
+              <a class="dropdown-item" (click)="useLanguage('en')" >English</a>
+              <a class="dropdown-item" (click)="useLanguage('vn')" >Vietnamese</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-md-0">
+          <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        </form>
+      </div>
+    </div>
+  </nav>
     </header>
+    <
     <router-outlet></router-outlet>
     <footer>
     </footer>
@@ -34,16 +64,36 @@ import { PostsService } from './posts/posts.service';
   providers: [PostsService]
 })
 export class AppComponent implements OnInit {
-  public angularclassLogo = 'assets/img/angularclass-avatar.png';
+  //public angularclassLogo = 'assets/img/angularclass-avatar.png';
   public name = 'Mean stack starter';
-  public url = 'https://mean.io';
+  public url = '';
 
-  constructor(
-    public appState: AppState
-  ) { }
+
+
+  constructor(private translate: TranslateService,platformLocation: PlatformLocation) {
+    this.url = (platformLocation as any).href
+    translate.setDefaultLang('en');
+  }
+
+  useLanguage(language: string) {
+    this.translate.use(language);
+  }
+
+  //constructor(){}
+
+  /*
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('en');
+  }
+
+  switchLanguage(language: string) {
+    this.translate.use(language);
+  }
+ 
+  */
 
   public ngOnInit() {
-    console.log('Initial App State', this.appState.state);
+    //console.log('Initial App State', this.appState.state);
   }
 
 }
