@@ -1,15 +1,79 @@
 /* this file will be extracted to main dist folder and is imported in index.html */
 /* This file is for setting global styles  */
 @import 'variables';
-a{
-  cursor: pointer;
+
+
+.widget>.name-widget>h2#name {
+  color: #fff;
+  text-transform: none;
+  font-size: 28px;
 }
+
+.widget > .name-widget {
+  margin: 30px 0px 11px 0px;
+}
+
+h1,h2,h3,h4,h5,h6,p,textarea,form,input{
+  color: #fff;
+}
+.body{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+a{
+  color: #fff !important;
+  text-decoration: none !important;
+  outline: none;
+  cursor: pointer;    
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+a:hover{
+  color: #21b685 !important;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+body, .ui-widget {
+  font-family: "Roboto","segoe ui",Helvetica,Arial,sans-serif!important;
+  font-size: 13px;
+  position: relative;
+  line-height: 20px;
+}
+
+body {
+  background: #192536;
+  font-size: 14px;
+}
+
+.input-search{
+  padding: 2px 18px;
+    border: 1px solid #21b685;
+    background-color: #21324a;
+    border-radius: 7px;
+}
+
+
 .container>h1 {
   margin: 0 !important
 }
 
 header {
-  background-color: #182434 !important;
+  background-color: #21324a !important;
+}
+
+li.term>div>p {
+  line-height: 8px;
+}
+
+.vega {
+  font-size: 13px;
+  margin: 30px 0 10px 0;
 }
 
 a.navbar-brand.logo{
@@ -20,8 +84,141 @@ a.navbar-brand.logo{
   background-size: 90px 40px;
   text-indent: -10000px;
 }
+
+a.navbar-brand.logo.while{
+  background: transparent url(/assets/img/logo-while.png) no-repeat left top !important;
+  background-size: 90px 40px !important;
+}
+
 @import '~@angular/material/_theming';
 
-body {
-  
+footer {
+  background: #21324a;
+  color: #fff;
+  padding: 20px 0px;
+  overflow: hidden;
+  clear: both;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+.ft-content-bottom li {
+  float: left;
+}
+
+.border-bot {
+  border: none !important;
+  clear: both;
+  height: 1px;
+  margin: 20px 0;
+}
+
+.border {
+  background: #4d5b6e;
+  clear: both;
+  height: 1px;
+}
+
+.term {
+  margin-left: 28px;
+}
+
+ul li {
+  list-style: none!important;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.ul_ft {
+  overflow: hidden;
+}
+
+.ul_ft li {
+  float: left;
+  display: inline;
+  width: 16%;
+  line-height: 20px;
+  text-shadow: 1px 1px 1px #333;
+  font-size: 14px;
+}
+
+
+
+
+.sub_ft li {
+  clear: both;
+  width: 100%;
+  text-shadow: 1px 1px 2px #333;
+}
+
+.ul_ft li a {
+  color: #c0c0c0;
+  line-height: 26px;
+  font-size: 13px;
+}
+
+.footer a {
+  color: inherit!important;
+}
+
+.color-active {
+  color: #21b685!important;
+}
+
+.btn-down-app-bottom {
+  width: 153px;
+  height: 35px;
+  border-radius: 4px;
+  border: none;
+  background: #21b685;
+  color: #fff;
+  font-size: 12px;
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 53px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.btn-down-app-bottom img {
+  position: absolute;
+  top: 6px;
+  left: 13px;
+}
+
+img {
+  border: 0;
+}
+
+
+li.new-sub-li-1 {
+  width: 34%;
+  clear: none;
+  float: left;
+  margin-top: 10px;
+}
+
+.ul_ft li {
+  font-size: 14px;
+}
+
+.top_li {
+  font-weight: bold;
+  line-height: 30px!important;
+  font-weight: 600;
+}
+
+.top_li a{
+  color: #f0f0f1!important;
 }
