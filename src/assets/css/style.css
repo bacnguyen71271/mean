@@ -1,4 +1,4 @@
-.videolarge>.box_absolute>a>img{
+.video-large>div>.box_absolute>a>img{
     float: left;
     width: 100%;
     height: 100%;
@@ -8,7 +8,7 @@
 }
 
 
-.videolarge>.box_absolute>.view_mv>.icon_view{
+.video-large>div>.box_absolute>.view_mv>.icon_view{
     background: url(/assets/img/icon-repeat.png) 0px -237px no-repeat;
     width: 14px;
     height: 14px;
@@ -16,77 +16,7 @@
     margin: 8px 3px 0 0;
 }
 
-.video-small>.videolarge>h3>a.name_video_index {
-    font-size: 14px;
-    float: left;
-    line-height: 18px;
-    width: 195px;
-    margin: 3px 0 5px 0;
-    max-height: 36px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    vertical-align: text-bottom;
-}
-
-.video-small>div>.box_relative>span.icon_time_video{
-    background-color: #000;
-    font-weight: bold;
-    color: #FFFFFF;
-    bottom: 0px;
-    right: 0px;
-    font-size: 11px;
-    padding: 0px 5px;
-    height: 16px;
-    line-height: 16px;
-    position: absolute;
-    z-index: 100;
-}
-
-.video-small>.videolarge>h4>a.name_actor{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-shadow: 0 1px 1px rgba(3,3,3,0.7);
-    font-size: 12px;
-    color: #999999 !important;
-    -webkit-transition: all 0.2s linear;
-    -moz-transition: all 0.2s linear;
-    transition: all 0.2s linear;
-}
-
-.video-small>.videolarge>h4{
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    float: left;
-    color: #acacac;
-    font-size: 12px;
-}
-
-
-.video-small>.videolarge>.box_absolute{
-    position: relative;
-    background: #000;
-}
-
-.video-small>.videolarge>div>a>.view_mv {
-    position: absolute;
-    color: #c7c7c7;
-    right: 0;
-    z-index: 101;
-    font-size: 12px;
-    background: url(/assets/img/bg_view_listen.png) left top;
-    padding: 0 5px 0 15px;
-    line-height: 24px;
-    display: block;
-}
-
-
-
-
-.videolarge .box_absolute .name_video_large a.name_video{
+.video-large>div>.box_absolute .name_video_large a.name_video{
     float: left;
     min-height: auto;
     line-height: 22px;
@@ -97,22 +27,13 @@
     font-size: 18px;
 }
 
-.col-md-6.videolarge {
+.video-large>div {
     margin-bottom: 20px;
 }
 
-.videolarge .box_absolute .name_video_large{
-    position: absolute;
-    width: 390px;
-    bottom: 0;
-    padding: 10px;
-    font-size: 16px;
-    z-index: 10;
-    color: #a8a8a8;
-}
 
 
-.videolarge .box_absolute .name_video_large a.name_actor{
+.video-large>div>.box_absolute .name_video_large a.name_actor{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -125,14 +46,14 @@
 }
 
 
-.videolarge .box_absolute .name_video_large a.name_actor:hover{
+.video-large>div>.box_absolute>.name_video_large>a.name_actor:hover{
     color: #21b685 !important;
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
 
-.videolarge .box_absolute .name_video_large {
+.video-large>div>.box_absolute>.name_video_large {
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -173,7 +94,7 @@
     transition: opacity 0.2s linear;
 }
 
-.videolarge>.box_absolute:hover .icon_play{
+.video-large>div>.box_absolute:hover .icon_play{
     opacity: 1 !important;
     display: block !important;
     visibility: visible;
@@ -181,8 +102,7 @@
     -moz-transition: opacity 0.2s linear;
     transition: opacity 0.2s linear;
 }
-
-.videolarge>.box_absolute:hover .name_video{
+.video-large>div>.box_absolute:hover .name_video{
     color: #21b685 !important;
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
@@ -190,7 +110,7 @@
 }
 
 
-.videolarge>.box_absolute:hover img{
+.video-large>div>.box_absolute:hover img{
     -webkit-opacity: 0.7;
     -moz-opacity: 0.7;
     opacity: 0.7;
@@ -199,7 +119,7 @@
     transition: opacity 0.2s linear;
 }
 
-.videolarge>.box_absolute>.icon_time_video{
+.video-large>div>.box_absolute>.icon_time_video{
     font-weight: bold;
     color: #FFFFFF;
     bottom: 0;
@@ -213,7 +133,7 @@
 }
 
 
-.videolarge>.box_absolute>.view_mv{
+.video-large>div>.box_absolute>.view_mv{
     position: absolute;
     color: #c7c7c7;
     right: 0;
@@ -225,11 +145,86 @@
     display: block;
 }
 
-.videolarge>.box_absolute{
+.video-large>div>.box_absolute{
     position: relative;
     height: 100%;
     margin-bottom:10px; 
 }
+
+/*Video Small*/
+
+.video-small>div>.box_absolute>a>.view_mv {
+  position: absolute;
+  color: #c7c7c7;
+  right: 0;
+  z-index: 101;
+  font-size: 12px;
+  background: url(/assets/img/bg_view_listen.png) left top;
+  padding: 0 5px 0 15px;
+  line-height: 24px;
+  display: block;
+}
+
+.video-small>div>.box_absolute>a>.view_mv>.icon_view{
+  background: url(/assets/img/icon-repeat.png) 0px -237px no-repeat;
+  width: 14px;
+  height: 14px;
+  float: left;
+  margin: 8px 3px 0 0;
+}
+
+.video-small>div>.box_absolute>.icon_time_video{
+  font-weight: bold;
+  color: #FFFFFF;
+  bottom: 0;
+  right: 0px;
+  font-size: 12px;
+  padding: 4px 6px;
+  line-height: 16px;
+  position: absolute;
+  z-index: 100;
+  background-color: #000000;
+}
+
+.video-small>div>h3>a{
+  font-size: 14px;
+  float: left;
+  line-height: 18px;
+  width: 100%;
+  margin: 3px 0 5px 0;
+  max-height: 36px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: text-bottom;
+}
+
+.video-small>div>h4>a{
+  color: #9a9a9a !important;
+  font-size: 12px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  float: left;
+  font-size: 12px;
+}
+
+.video-small>div>.box_absolute>a>img{
+  float: left;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.video-small>div>.box_absolute{
+  position: relative;
+  width: 100%;
+}
+
+
+.video-small>div{
+  margin-bottom: 20px;
+}
+
 
 /* this file will be extracted to main dist folder and is imported in index.html */
 /* This file is for setting global styles  */
