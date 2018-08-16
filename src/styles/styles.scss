@@ -191,6 +191,23 @@ ul {
   cursor: pointer;
 }
 
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  background-color: #21324a !important;
+}
+
+.dropdown-menu.show>a:not([href]):not([tabindex]):hover {
+  background-color: #253b5a;
+}
+
+input.form-control.input-search {
+  color: #21b685;
+  background-color: #21324a;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+}
+
 .btn-down-app-bottom img {
   position: absolute;
   top: 6px;
