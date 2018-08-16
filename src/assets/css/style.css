@@ -17,20 +17,28 @@
 }
 
 .video-large>div>.box_absolute .name_video_large a.name_video{
-    float: left;
-    min-height: auto;
-    line-height: 22px;
-    margin: 0;
-    overflow: hidden;
-    width: 100%;
-    text-shadow: 0 1px 1px rgba(3,3,3,0.7);
-    font-size: 18px;
+  float: left;
+  min-height: auto;
+  line-height: 21px;
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+  text-shadow: 0 1px 1px rgba(3,3,3,0.7);
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.video-large>div>.box_absolute>.name_video_large>a.name_actor:hover{
+  color:#6a8385 !important
 }
 
 .video-large>div {
-    margin-bottom: 20px;
+    margin-bottom: 70px;
 }
-
+.name_video_large>h4 {
+  line-height: 16px;
+  margin-bottom: 13px;
+}
 
 
 .video-large>div>.box_absolute .name_video_large a.name_actor{
@@ -56,8 +64,8 @@
 .video-large>div>.box_absolute>.name_video_large {
     position: absolute;
     width: 100%;
-    bottom: 0;
-    padding: 0px 10px;
+    bottom: -66px;
+    padding: 0;
     font-size: 16px;
     z-index: 10;
     color: #a8a8a8;
@@ -149,80 +157,6 @@
     position: relative;
     height: 100%;
     margin-bottom:10px; 
-}
-
-/*Video Small*/
-
-.video-small>div>.box_absolute>a>.view_mv {
-  position: absolute;
-  color: #c7c7c7;
-  right: 0;
-  z-index: 101;
-  font-size: 12px;
-  background: url(/assets/img/bg_view_listen.png) left top;
-  padding: 0 5px 0 15px;
-  line-height: 24px;
-  display: block;
-}
-
-.video-small>div>.box_absolute>a>.view_mv>.icon_view{
-  background: url(/assets/img/icon-repeat.png) 0px -237px no-repeat;
-  width: 14px;
-  height: 14px;
-  float: left;
-  margin: 8px 3px 0 0;
-}
-
-.video-small>div>.box_absolute>.icon_time_video{
-  font-weight: bold;
-  color: #FFFFFF;
-  bottom: 0;
-  right: 0px;
-  font-size: 12px;
-  padding: 4px 6px;
-  line-height: 16px;
-  position: absolute;
-  z-index: 100;
-  background-color: #000000;
-}
-
-.video-small>div>h3>a{
-  font-size: 14px;
-  float: left;
-  line-height: 18px;
-  width: 100%;
-  margin: 3px 0 5px 0;
-  max-height: 36px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  vertical-align: text-bottom;
-}
-
-.video-small>div>h4>a{
-  color: #9a9a9a !important;
-  font-size: 12px;
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  float: left;
-  font-size: 12px;
-}
-
-.video-small>div>.box_absolute>a>img{
-  float: left;
-  width: 100%;
-  margin-bottom: 5px;
-}
-.video-small>div>.box_absolute{
-  position: relative;
-  width: 100%;
-}
-
-
-.video-small>div{
-  margin-bottom: 20px;
 }
 
 
