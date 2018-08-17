@@ -4,6 +4,6 @@ import { Component, OnInit } from '@angular/core';
   selector: 'admin-home',  // <home></home>
   templateUrl: './admin-home.component.html'
 })
-export class HomeComponent {
+export class AdminHomeComponent {
     
 }

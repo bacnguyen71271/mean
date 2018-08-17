@@ -12,14 +12,14 @@ import {
  } from '@angular/material';
 
 import { routes } from './admin.routers';
-import { HomeComponent } from './admin-home/admin-home.component';
+import { AdminHomeComponent } from './admin-home/admin-home.component';
 
 @NgModule({
   declarations: [
     /**
      * Components / Directives/ Pipes
      */
-    HomeComponent,
+    AdminHomeComponent,
   ],
   imports: [
     CommonModule,
@@ -36,6 +36,6 @@ import { HomeComponent } from './admin-home/admin-home.component';
     // ApolloModule.forRoot(client)
   ],
 })
-export class PostsModule {
+export class AdminModule {
   public static routes = routes;
 }

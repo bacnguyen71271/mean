@@ -1,1 +1,1 @@
-export { PostsModule } from './admin.module';
+export { AdminModule } from './admin.module';

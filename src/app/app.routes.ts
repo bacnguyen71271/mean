@@ -10,6 +10,6 @@ export const ROUTES: Routes = [
   { path: '',      component: HomeComponent },
   { path: 'posts', loadChildren: './posts#PostsModule' },
   { path: 'react', component: ReactComponent },
+  { path: 'admin', loadChildren: './admin#AdminModule' },
   { path: '**',    component: NoContentComponent },
-  { path: 'admin', loadChildren: './admin#PostsModule' },
 ];
