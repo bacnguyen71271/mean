@@ -12,8 +12,8 @@ export class PostsService {
     private posts: ApolloQueryObservable<PostsInterface>;
     private apollo: Apollo;
 
-    constructor(apollo: Apollo) {
-        this.apollo = apollo;
+    constructor(apollos: Apollo) {
+        this.apollo = apollos;
     }
 
     get(): ApolloQueryObservable<PostsInterface> {

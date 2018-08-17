@@ -400,3 +400,27 @@ li.new-sub-li-1 {
 .top_li a{
   color: #f0f0f1!important;
 }
+
+
+.nav-item.dropdown.show>.dropdown-menu.show {
+  background-color: #21324a;
+}
+
+.fa-2{
+  font-size: 16px;
+}
+
+
+a.get-vip-button {
+  background-color: #21b685;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+a.get-vip-button:hover{
+  color:#21324a !important; 
+}
+
+.nav-link.dropdown-toggle.user:after{
+  content: none;
+}

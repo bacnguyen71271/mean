@@ -31,7 +31,7 @@ import { TranslateService } from '@ngx-translate/core';
                   </button>
                   <div class="navbar-collapse collapse" id="navbarsExample07" style="">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                           <a class="nav-link" routerLink="/posts">Posts <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
@@ -40,13 +40,30 @@ import { TranslateService } from '@ngx-translate/core';
                         <li class="nav-item">
                           <a class="nav-link" routerLink="api/graphql">Graphql</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        
+                    </ul>
+                    <ul class="nar-right navbar-nav">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle user" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><i class="fa fa-user fa-2" aria-hidden="true"></i>  Account</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown07">
+                              <a class="dropdown-item" (click)="useLanguage('en')" >Login</a>
+                              <a class="dropdown-item" (click)="useLanguage('vn')" >Register</a>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" routerLink="/posts"><i class="fa fa-cloud-upload fa-2" aria-hidden="true"></i>  Upload</a>
+                      </li>
+                      
+                      <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
                           <div class="dropdown-menu" aria-labelledby="dropdown07">
                               <a class="dropdown-item" (click)="useLanguage('en')" >English</a>
                               <a class="dropdown-item" (click)="useLanguage('vn')" >Vietnamese</a>
                           </div>
-                        </li>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link get-vip-button" routerLink="/posts">GET VIP NOW</a>
+                      </li>
                     </ul>
                     <form class="form-inline my-2 my-md-0">
                         <input class="form-control input-search" type="text" placeholder="Search" aria-label="Search">

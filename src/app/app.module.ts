@@ -35,11 +35,12 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
+
 import { HomeComponent } from './home';
-import { ReactComponent } from './react';
-import { ProfileComponent } from './profile';
-//import { angularProfileCard } from '../../components/main-profile/index';
+import { ReactComponent } from './react'; 
 import { NoContentComponent } from './no-content';
+
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -79,7 +80,6 @@ type StoreType = {
     AppComponent,
     HomeComponent,
     ReactComponent,
-    ProfileComponent,
     NoContentComponent,
   ],
   /**

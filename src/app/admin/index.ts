@@ -1,0 +1,1 @@
+export { PostsModule } from './admin.module';
